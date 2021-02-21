@@ -1,0 +1,74 @@
+@use 'variables';
+@import "~antd/dist/antd.css";
+
+// antd customization
+.ant-layout {
+    background-color: variables.$base-background-color !important;
+}
+
+a {
+    color: #a9a8a8 !important;
+}
+
+a:hover {
+    color: variables.$base-text-color !important;
+}
+
+// main changes start here
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: variables.$base-background-color !important;
+    color: variables.$base-text-color !important;
+    font-family: variables.$base-font;
+    font-weight: variables.$regular;
+}
+
+.header-wrapper {
+    margin: 0 8.33vh 0;
+    height: 17.314814814814813vh;
+}
+
+.header-row {
+    height: 100%;
+    font-weight: variables.$light;
+}
+
+.header-column {
+    font-size: 1vw;
+}
+
+.header-column-logo {
+    font-size: 1.5vw;
+    font-weight: variables.$bold;
+}
+
+.square-logo-wrapper {
+}
+
+.square-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 8.53125vh;
+    height: 8.53125vh;
+    border: 6px solid variables.$base-text-color;
+    transition: transform 1s ease ;
+}
+
+.square-logo-wrapper:hover .square-logo {
+    transform: rotate(variables.$rotation-degrees);
+}
+
+.square-logo-text {
+    text-align: center;
+    transition: transform 1s ease;
+}
+
+.square-logo-wrapper:hover .square-logo-text {
+    transform: rotate(- variables.$rotation-degrees);
+}

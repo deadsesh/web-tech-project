@@ -1,10 +1,14 @@
-import './resources/css/App.scss';
-import { Layout } from 'antd';
+import './resources/styles/App.scss';
 import 'antd/dist/antd.css';
+import { HeaderLayout } from "./layouts/HeaderLayout";
+import {Layout} from "antd";
 
 function App() {
     return (
         <div className="App">
+            <Layout>
+                <HeaderLayout/>
+            </Layout>
         </div>
     );
 }
