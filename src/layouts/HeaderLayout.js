@@ -1,16 +1,17 @@
 import React from 'react';
-import '../resources/styles/_header.scss'
+import '../resources/styles/_header.scss';
 import { Row, Col } from 'antd';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderLayout = () => {
     return(
         <div className="header-wrapper">
             <Row className="header-row" type="flex" justify="center" align="middle">
                 <Col className="header-column" flex={1.5}>
-                    <a href="">Home</a>
+                    <NavLink to="/home" activeClassName="active-navlink">Home</NavLink>
                 </Col>
                 <Col className="header-column" flex={1.5}>
-                    <a href="">Gallery</a>
+                    <NavLink to="/gallery" activeClassName="active-navlink">Gallery</NavLink>
                 </Col>
                 <Col className="header-column-logo" flex={2}>
                     <div className="square-logo-wrapper">
@@ -20,10 +21,10 @@ export const HeaderLayout = () => {
                     </div>
                 </Col>
                 <Col className="header-column" flex={1.5}>
-                    <a href="">About</a>
+                    <NavLink to="/about" activeClassName="active-navlink">About</NavLink>
                 </Col>
                 <Col className="header-column" flex={1.5}>
-                    <a href="">Contact</a>
+                    <NavLink to="/contact" activeClassName="active-navlink">Contact</NavLink>
                 </Col>
             </Row>
         </div>

@@ -1,14 +1,30 @@
 import './resources/styles/App.scss';
 import 'antd/dist/antd.css';
 import { HeaderLayout } from "./layouts/HeaderLayout";
-import {Layout} from "antd";
+import { GalleryLayout } from "./layouts/GalleryLayout";
+import { ContactLayout } from "./layouts/ContactLayout";
+import { AboutLayout } from "./layouts/AboutLayout";
+import { HomeLayout } from "./layouts/HomeLayout";
+import {
+    BrowserRouter as Router,
+    Route,
+    Redirect,
+    Switch
+} from 'react-router-dom';
 
 function App() {
     return (
         <div className="App">
-            <Layout>
+            <Router>
+                <Redirect to="/home"/>
                 <HeaderLayout/>
-            </Layout>
+                <Switch>
+                    <Route path="/home" component={HomeLayout} />
+                    <Route path="/gallery" component={GalleryLayout} />
+                    <Route path="/about" component={AboutLayout} />
+                    <Route path="/contact" component={ContactLayout} />
+                </Switch>
+            </Router>
         </div>
     );
 }
