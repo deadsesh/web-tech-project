@@ -16,10 +16,10 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <Redirect to="/home"/>
-                <HeaderLayout/>
+                <Redirect to="/"/>
+                <HeaderLayout />
                 <Switch>
-                    <Route path="/home" component={HomeLayout} />
+                    <Route exact path="/" component={HomeLayout} />
                     <Route path="/gallery" component={GalleryLayout} />
                     <Route path="/about" component={AboutLayout} />
                     <Route path="/contact" component={ContactLayout} />

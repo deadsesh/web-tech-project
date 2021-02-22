@@ -8,7 +8,7 @@ export const HeaderLayout = () => {
         <div className="header-wrapper">
             <Row className="header-row" type="flex" justify="center" align="middle">
                 <Col className="header-column" flex={1.5}>
-                    <NavLink to="/home" activeClassName="active-navlink">Home</NavLink>
+                    <NavLink to="/" activeClassName="active-navlink">Home</NavLink>
                 </Col>
                 <Col className="header-column" flex={1.5}>
                     <NavLink to="/gallery" activeClassName="active-navlink">Gallery</NavLink>
