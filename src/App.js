@@ -1,29 +1,29 @@
+import React, { useEffect } from 'react';
 import './resources/styles/App.scss';
 import 'antd/dist/antd.css';
-import { HeaderLayout } from "./layouts/HeaderLayout";
-import { GalleryLayout } from "./layouts/GalleryLayout";
-import { ContactLayout } from "./layouts/ContactLayout";
-import { AboutLayout } from "./layouts/AboutLayout";
-import { HomeLayout } from "./layouts/HomeLayout";
-import {
-    BrowserRouter as Router,
-    Route,
-    Redirect,
-    Switch
-} from 'react-router-dom';
+import { About, Contact, Gallery, Header, Home } from "./layouts/";
+import { AnimatePresence } from 'framer-motion';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { setInitialStateToLocalStorage } from "./helpers/Functions";
 
 function App() {
+
+    useEffect(() => {
+        setInitialStateToLocalStorage();
+    }, [])
     return (
         <div className="App">
             <Router>
                 <Redirect to="/"/>
-                <HeaderLayout />
-                <Switch>
-                    <Route exact path="/" component={HomeLayout} />
-                    <Route path="/gallery" component={GalleryLayout} />
-                    <Route path="/about" component={AboutLayout} />
-                    <Route path="/contact" component={ContactLayout} />
-                </Switch>
+                <Header/>
+                <AnimatePresence>
+                    <Switch>
+                        <Route exact path="/" component={ Home }/>
+                        <Route path="/gallery" component={ Gallery }/>
+                        <Route path="/about" component={ About }/>
+                        <Route path="/contact" component={ Contact }/>
+                    </Switch>
+                </AnimatePresence>
             </Router>
         </div>
     );

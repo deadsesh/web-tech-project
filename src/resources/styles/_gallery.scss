@@ -1,0 +1,41 @@
+@use 'variables';
+@import "~antd/dist/antd.css";
+
+// antd customization
+.gallery-image {
+    object-fit: contain !important;
+}
+
+.ant-image {
+    overflow: hidden !important;
+    padding: 4px;
+}
+
+.ant-image img {
+    width: 100% !important;
+    //margin: auto auto !important;
+    object-fit: cover !important;
+    float: left;
+}
+
+// main changes
+.gallery-wrapper {
+    margin: 0 7vw;
+    height: 100vh;
+}
+
+.gallery {
+    margin: 0 auto;
+    height: 100%;
+    float: left;
+}
+
+.gallery-item-wrapper {
+    //height: 300px;
+    //width: auto;
+    //overflow: hidden;
+}
+
+.gallery-item-wrapper img {
+    //object-fit: cover !important;
+}

@@ -1,0 +1,5 @@
+export { HeaderLayout as Header } from './HeaderLayout'
+export { HomeLayout as Home } from './HomeLayout'
+export { GalleryLayout as Gallery } from './GalleryLayout'
+export { AboutLayout as About } from './AboutLayout'
+export { ContactLayout as Contact } from './ContactLayout'

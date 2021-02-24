@@ -57,7 +57,7 @@ body {
     width: variables.$header-square-width;
     height: variables.$header-square-height;
     border: 6px solid variables.$base-text-color;
-    transition: transform 1s ease ;
+    transition: transform 1s ease;
 }
 
 .square-logo-wrapper:hover .square-logo {
