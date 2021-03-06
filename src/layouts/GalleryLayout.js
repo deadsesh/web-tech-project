@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { pageTransitions, pageVariants } from '../helpers/Transitions'
-import { Image, Layout } from 'antd';
+import { Row, Layout } from 'antd';
 import { GalleryItem } from '../components/GalleryItem';
 import { getStateByKey } from '../helpers/Functions';
+import { GalleryTags } from "../components/GalleryTags";
 
 const { Content } = Layout;
 
 export const GalleryLayout = () => {
 
-    const [ content, setContent ] = useState([]);
+    const [ images, setImages ] = useState([]);
 
     useEffect(() => {
-        setContent(getStateByKey('initialState'))
+        setImages(getStateByKey('initialState'))
     }, [])
 
     return (
@@ -26,19 +27,24 @@ export const GalleryLayout = () => {
         >
             <Content>
                 <div className="gallery-wrapper">
-                    <div className="gallery">
-                        <Image.PreviewGroup>
-                            { !content.length ? (
-                                <div>No content</div>
-                            ) : (
-                                content.map(({ title, img }) => {
-                                    return (
-                                        <GalleryItem title={ title } img={ img } width={ 300 }/>
-                                    )
-                                })
-                            ) }
-                        </Image.PreviewGroup>
-                    </div>
+                    <GalleryTags images={ images } setImages={ setImages }/>
+                    <Row justify="left" wrap>
+                        { !images.length ? (
+                            <div>No content</div>
+                        ) : (
+                            images.map(img => {
+                                return (
+                                    <GalleryItem
+                                        key={ img.id }
+                                        title={ img.title }
+                                        src={ img.src }
+                                        height={ 400 }
+                                    />
+                                )
+                            })
+                        )
+                        }
+                    </Row>
                 </div>
             </Content>
         </motion.div>

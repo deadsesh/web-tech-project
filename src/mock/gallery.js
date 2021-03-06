@@ -4,66 +4,103 @@ export const galleryMock = [
     {
         id: uuid(),
         title: "Cat",
-        img: "./img/cat.png"
+        src: "./img/cat.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Doberman",
-        img: "./img/doberman.png"
+        src: "./img/doberman.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "FLCL",
-        img: "./img/flcl.png"
+        src: "./img/flcl.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "FTP",
-        img: "./img/ftp.png"
+        src: "./img/ftp.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Grime",
-        img: "./img/grime.png"
+        src: "./img/grime.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "half",
-        img: "./img/half.png"
+        src: "./img/half.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Heart",
-        img: "./img/heart.png"
+        src: "./img/heart.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Nevermore",
-        img: "./img/nevermore.png"
+        src: "./img/nevermore.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Raven",
-        img: "./img/Raven.png"
+        src: "./img/Raven.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Shiba-Inu",
-        img: "./img/shibe.png"
+        src: "./img/shibe.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "VS",
-        img: "./img/star-vs-gif.gif"
+        src: "./img/star-vs-gif.gif",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "VG",
-        img: "./img/vg.png"
+        src: "./img/vg.png",
+        tag: "art"
     },
     {
         id: uuid(),
         title: "Weeb shit",
-        img: "./img/weeb-shit.jpg"
+        src: "./img/weeb-shit.jpg",
+        tag: "art"
+    },
+    {
+        id: uuid(),
+        title: "C#",
+        src: "./img/cs.png",
+        tag: "programming"
+    },
+    {
+        id: uuid(),
+        title: "Python",
+        src: "./img/python.png",
+        tag: "programming"
+    },
+    {
+        id: uuid(),
+        title: "React",
+        src: "./img/react.png",
+        tag: "programming"
+    },
+    {
+        id: uuid(),
+        title: "IDK",
+        src: "./img/sample.jpg",
+        tag: "programming"
     }
 ]

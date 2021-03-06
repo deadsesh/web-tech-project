@@ -2,9 +2,6 @@
 @import "~antd/dist/antd.css";
 
 // antd customization
-.gallery-image {
-    object-fit: contain !important;
-}
 
 .ant-image {
     overflow: hidden !important;
@@ -12,30 +9,33 @@
 }
 
 .ant-image img {
-    width: 100% !important;
+    //width: 100% !important;
     //margin: auto auto !important;
     object-fit: cover !important;
-    float: left;
+    //float: left;
+}
+
+.ant-btn {
+    color: variables.$base-link-color !important;
+    border-color: variables.$base-link-color !important;
+}
+
+.ant-btn:focus, .ant-btn:hover {
+    color: variables.$base-active-link-color !important;
+    border-color: variables.$base-active-link-color !important;
 }
 
 // main changes
 .gallery-wrapper {
     margin: 0 7vw;
     height: 100vh;
+    justify-content: center;
+}
+/*
+.gallery-item {
+    transition: transform 0.25s ease;
 }
 
-.gallery {
-    margin: 0 auto;
-    height: 100%;
-    float: left;
-}
-
-.gallery-item-wrapper {
-    //height: 300px;
-    //width: auto;
-    //overflow: hidden;
-}
-
-.gallery-item-wrapper img {
-    //object-fit: cover !important;
-}
+.gallery-item:hover {
+    transform: scale(1.1);
+}*/
