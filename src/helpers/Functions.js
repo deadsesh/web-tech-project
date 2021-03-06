@@ -1,4 +1,4 @@
-import { galleryMock } from '../mock/gallery'
+import { galleryMock } from '../mock/gallery';
 
 export function setInitialStateToLocalStorage() {
     localStorage.setItem('initialState', JSON.stringify(galleryMock));
@@ -10,5 +10,8 @@ export function getStateByKey(key) {
 
 export function filterByTag(tag) {
     const images = getStateByKey('initialState');
-    return images.filter((image) => image.tag === tag);
+    if(tag === 'all')
+        return images
+    else
+        return images.filter((image) => image.tag === tag);
 }

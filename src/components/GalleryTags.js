@@ -8,6 +8,17 @@ export const GalleryTags = (props) => {
         <div>
             <p style={{ fontSize: "20px" }}>Sort by</p>
             <Button ghost
+                    onClick={ () => {
+                        const newState = filterByTag('all');
+                        props.setImages(newState);
+                    }}
+            >
+                All
+            </Button>
+
+            <Divider type="vertical"/>
+
+            <Button ghost
                 onClick={ () => {
                     const newState = filterByTag('art');
                     props.setImages(newState);
