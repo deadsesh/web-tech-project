@@ -11,8 +11,7 @@ export const GalleryTags = (props) => {
                 onClick={ () => {
                     const newState = filterByTag('art');
                     props.setImages(newState);
-                }
-            }
+                }}
             >
                 Art
             </Button>
@@ -23,8 +22,7 @@ export const GalleryTags = (props) => {
                 onClick={ () => {
                     const newState = filterByTag('programming');
                     props.setImages(newState);
-                }
-            }
+                }}
             >
                 Programming
             </Button>
