@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Divider } from 'antd';
 import '../resources/styles/_gallery.scss'
-import { filterByTag} from "../helpers/Functions";
+import { filterByTag } from "../helpers/Functions";
 
 export const GalleryTags = (props) => {
     return (

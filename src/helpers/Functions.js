@@ -9,6 +9,6 @@ export function getStateByKey(key) {
 }
 
 export function filterByTag(tag) {
-    const images = JSON.parse(localStorage.getItem('initialState'));
+    const images = getStateByKey('initialState');
     return images.filter((image) => image.tag === tag);
 }
