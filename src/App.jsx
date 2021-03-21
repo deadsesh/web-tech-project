@@ -29,4 +29,12 @@ function App() {
     );
 }
 
+// TODO mobx
+// TODO typescript
+// TODO about
+// TODO home
+// TODO contact with smtp
+// TODO move images to src
+// TODO animations
+// TODO splashscreen
 export default App;
