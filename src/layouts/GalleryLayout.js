@@ -30,14 +30,14 @@ export const GalleryLayout = () => {
                     <GalleryTags images={ images } setImages={ setImages }/>
                     <Row justify="left" wrap>
                         { !images.length ? (
-                            <div>No content</div>
+                            <div>Oops! Something went wrong!</div>
                         ) : (
                             images.map(img => {
                                 return (
                                     <GalleryItem
                                         key={ img.id }
                                         title={ img.title }
-                                        src={ img.src }
+                                        src={ img.src.default }
                                         height={ 400 }
                                     />
                                 )
