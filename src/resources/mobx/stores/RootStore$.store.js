@@ -1,10 +1,10 @@
-import { types, applySnapshot } from 'mobx-state-tree'
-import { galleryMock } from "../../mock/gallery";
-import { ContentModel } from "../models/ContentModel";
-import { shuffle } from "../../helpers/Functions";
+import { applySnapshot, types } from 'mobx-state-tree'
+import { galleryMock } from '../../mock/gallery'
+import { GalleryModel } from '../models/GalleryModel.model'
+import { shuffle } from '../../helpers/Functions'
 
 export const RootStore$ = types.model('RootStore$', {
-    content$: types.array(ContentModel)
+    content$: types.array(GalleryModel)
 })
     .actions((self) => (
             {

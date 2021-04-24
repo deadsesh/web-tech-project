@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { pageTransitions, pageVariants } from "../helpers/Transitions";
+import React from 'react'
+import { motion } from 'framer-motion'
+import { pageTransitions, pageVariants } from '../helpers/Transitions'
 
 export const ContactLayout = () => {
     return (
@@ -12,7 +12,7 @@ export const ContactLayout = () => {
             variants={ pageVariants }
             transition={ pageTransitions }
         >
-            <h1 style={ { color: "white" } }>Contact</h1>
+            <h1 style={ { color: 'white' } }>Contact</h1>
         </motion.div>
     )
 }

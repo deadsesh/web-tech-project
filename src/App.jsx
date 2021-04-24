@@ -1,9 +1,9 @@
-import React from 'react';
-import './resources/styles/App.scss';
-import 'antd/dist/antd.css';
-import { About, Contact, Gallery, Header, Home } from "./resources/layouts/";
-import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import './resources/styles/App.scss'
+import 'antd/dist/antd.css'
+import { About, Contact, Gallery, Header, Home } from './resources/layouts/'
+import { AnimatePresence } from 'framer-motion'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { StoreProvider } from './resources/mobx/RootStoreProvider'
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
                 </Router>
             </StoreProvider>
         </div>
-    );
+    )
 }
 
 // TODO typescript
@@ -38,4 +38,4 @@ function App() {
 // TODO contact with smtp
 // TODO animations
 // TODO splashscreen
-export default App;
+export default App

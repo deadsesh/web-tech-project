@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Button, Divider } from 'antd';
+import React, { useEffect } from 'react'
+import { Button, Divider } from 'antd'
 import '../styles/_gallery.scss'
-import { useRootStore } from "../mobx/RootStoreProvider";
-import { observer } from "mobx-react-lite";
+import { useRootStore } from '../mobx/RootStoreProvider'
+import { observer } from 'mobx-react-lite'
 
 export const GalleryTags = observer(() => {
 
@@ -10,10 +10,10 @@ export const GalleryTags = observer(() => {
 
     useEffect(() => {
         setContent()
-    }, [setContent])
+    }, [ setContent ])
     return (
         <div>
-            <p style={ { fontSize: "20px" } }>Sort by</p>
+            <p style={ { fontSize: '20px' } }>Sort by</p>
             <Button ghost
                     onClick={ () => {
                         setContent('all')

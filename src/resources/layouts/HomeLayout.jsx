@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { pageTransitions, pageVariants } from "../helpers/Transitions";
+import React from 'react'
+import { motion } from 'framer-motion'
+import { pageTransitions, pageVariants } from '../helpers/Transitions'
 
-export const AboutLayout = () => {
+export const HomeLayout = () => {
     return (
         <motion.div
             className=""
@@ -12,7 +12,7 @@ export const AboutLayout = () => {
             variants={ pageVariants }
             transition={ pageTransitions }
         >
-            <h1 style={ { color: "white" } }>About</h1>
+            <h1 style={ { color: 'white' } }>Home</h1>
         </motion.div>
     )
 }

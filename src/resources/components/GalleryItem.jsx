@@ -1,6 +1,6 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import { Image, Col } from 'antd';
+import React from 'react'
+import 'antd/dist/antd.css'
+import { Col, Image } from 'antd'
 import '../styles/_gallery.scss'
 
 export const GalleryItem = (props) => {

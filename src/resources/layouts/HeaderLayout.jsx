@@ -1,7 +1,7 @@
-import React from 'react';
-import '../styles/_header.scss';
-import { Col, Row } from 'antd';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import '../styles/_header.scss'
+import { Col, Row } from 'antd'
+import { NavLink } from 'react-router-dom'
 
 export const HeaderLayout = () => {
     return (

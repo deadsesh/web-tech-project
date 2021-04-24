@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { pageTransitions, pageVariants } from '../helpers/Transitions'
-import { Layout, Row } from 'antd';
-import { GalleryItem } from '../components/GalleryItem';
-import { GalleryTags } from "../components/GalleryTags";
-import { observer } from "mobx-react-lite";
-import { useRootStore } from "../mobx/RootStoreProvider";
+import { Layout, Row } from 'antd'
+import { GalleryItem } from '../components/GalleryItem'
+import { GalleryTags } from '../components/GalleryTags'
+import { observer } from 'mobx-react-lite'
+import { useRootStore } from '../mobx/RootStoreProvider'
 
-const { Content } = Layout;
+const { Content } = Layout
 
 export const GalleryLayout = observer(() => {
 
@@ -34,17 +34,17 @@ export const GalleryLayout = observer(() => {
                         { !content$.length ? (
                             <div>Oops! Something went wrong!</div>
                         ) : (
-                            content$.map(img => {
-                                return (
-                                    <GalleryItem
-                                        key={ img.id }
-                                        title={ img.title }
-                                        src={ img.src.default }
-                                        height={ 400 }
-                                    />
-                                )
-                            })
-                        )
+                              content$.map(img => {
+                                  return (
+                                      <GalleryItem
+                                          key={ img.id }
+                                          title={ img.title }
+                                          src={ img.src.default }
+                                          height={ 400 }
+                                      />
+                                  )
+                              })
+                          )
                         }
                     </Row>
                 </div>
