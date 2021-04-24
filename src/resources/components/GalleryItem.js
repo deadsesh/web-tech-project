@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Image, Col } from 'antd';
-import '../resources/styles/_gallery.scss'
+import '../styles/_gallery.scss'
 
 export const GalleryItem = (props) => {
     return (
@@ -11,6 +11,7 @@ export const GalleryItem = (props) => {
                 preview={ true }
                 src={ props.src }
                 height={ props.height }
+                width={ props.height }
             />
         </Col>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../resources/styles/_header.scss';
+import '../styles/_header.scss';
 import { Col, Row } from 'antd';
 import { NavLink } from 'react-router-dom';
 
