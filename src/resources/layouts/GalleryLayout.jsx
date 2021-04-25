@@ -11,13 +11,12 @@ const { Content } = Layout
 
 export const GalleryLayout = observer(() => {
 
-    const { setInitialContent, content$ } = useRootStore()
+    const { setInitialContent, gallery$ } = useRootStore()
 
     useEffect(() => {
         setInitialContent()
     }, [ setInitialContent ])
 
-    console.log(content$)
     return (
         <motion.div
             className=""
@@ -31,10 +30,10 @@ export const GalleryLayout = observer(() => {
                 <div className="gallery-wrapper">
                     <GalleryTags/>
                     <Row justify="left" wrap>
-                        { !content$.length ? (
+                        { !gallery$.length ? (
                             <div>Oops! Something went wrong!</div>
                         ) : (
-                              content$.map(img => {
+                              gallery$.map(img => {
                                   return (
                                       <GalleryItem
                                           key={ img.id }

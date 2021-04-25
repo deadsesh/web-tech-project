@@ -4,23 +4,22 @@ import { GalleryModel } from '../models/GalleryModel.model'
 import { shuffle } from '../../helpers/Functions'
 
 export const RootStore$ = types.model('RootStore$', {
-    content$: types.array(GalleryModel)
+    gallery$: types.array(GalleryModel)
 })
     .actions((self) => (
             {
                 setContent(tag) {
 
-                    self.content$ = shuffle(galleryMock)
+                    self.gallery$ = shuffle(galleryMock)
                     if(tag !== 'all') {
-                        self.content$ = self.content$.filter((image) => image.tag === tag)
+                        self.gallery$ = self.gallery$.filter((image) => image.tag === tag)
                     } else {
-                        applySnapshot(self.content$, galleryMock)
+                        applySnapshot(self.gallery$, galleryMock)
                     }
                 },
 
                 setInitialContent() {
-                    self.content$ = galleryMock
-                    console.log('setinitial ' + self.content$)
+                    self.gallery$ = galleryMock
                 }
             }
         )
