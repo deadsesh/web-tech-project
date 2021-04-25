@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { pageTransitions, pageVariants } from '../helpers/Transitions'
+import { KanyeQuote } from '../components/KanyeQuote'
 
 export const HomeLayout = () => {
     return (
@@ -13,6 +14,7 @@ export const HomeLayout = () => {
             transition={ pageTransitions }
         >
             <h1 style={ { color: 'white' } }>Home</h1>
+            <KanyeQuote/>
         </motion.div>
     )
 }
